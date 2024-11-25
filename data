@@ -1,0 +1,32 @@
+CREATE TABLE schedules (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    subject VARCHAR(100) NOT NULL,       -- Nama mata pelajaran
+    teacher VARCHAR(100) NOT NULL,       -- Nama guru
+    class VARCHAR(50) NOT NULL,          -- Nama kelas
+    hoursPerWeek INT NOT NULL,           -- Jumlah jam per minggu
+    day VARCHAR(20),                     -- Hari jadwal (hasil penjadwalan)
+    time VARCHAR(20),                    -- Waktu jadwal (hasil penjadwalan)
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+INSERT INTO schedules (subject, teacher, class, hoursPerWeek) VALUES
+('Matematika', 'Budi', 'X IPA 1', 4),
+('Bahasa Inggris', 'Siti', 'X IPA 1', 3),
+('Fisika', 'Andi', 'X IPA 2', 5),
+('Kimia', 'Rina', 'X IPA 1', 2),
+('Biologi', 'Tina', 'X IPA 2', 4);
+
+
+
+Schema::create('schedules', function (Blueprint $table) {
+    $table->id();
+    $table->string('subject');
+    $table->string('teacher');
+    $table->string('class');
+    $table->integer('hoursPerWeek');
+    $table->string('day')->nullable();
+    $table->string('time')->nullable();
+    $table->timestamps();
+});
