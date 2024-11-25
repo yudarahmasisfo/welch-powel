@@ -13,3 +13,7 @@ Loop untuk Jam Tersisa:
 Jika jumlah jam masih tersisa (hoursRemaining), jadwal terus dibuat hingga kebutuhan jam terpenuhi atau semua slot habis.
 
 
+
+Catatan
+Pastikan jumlah slot waktu (hari × waktu) cukup untuk semua jam mata pelajaran. Jika tidak, perlu strategi tambahan seperti prioritas manual.
+
