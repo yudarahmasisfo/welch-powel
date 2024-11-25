@@ -1,0 +1,15 @@
+Perubahan Utama
+Urutan Berdasarkan Jam Per Minggu:
+
+Data Schedule diurutkan berdasarkan hoursPerWeek secara menurun. Ini memastikan mata pelajaran dengan alokasi jam lebih besar diprioritaskan.
+Pemantauan Slot Waktu:
+
+Digunakan $slotTracker untuk memastikan jumlah jam mata pelajaran per minggu dialokasikan secara akurat dalam slot waktu yang tersedia.
+Alokasi Berdasarkan Hari dan Slot:
+
+Slot waktu ditentukan dengan logika ($color - 1) % count($days) untuk hari dan floor(($color - 1) / count($days)) % count($timeSlots) untuk waktu.
+Loop untuk Jam Tersisa:
+
+Jika jumlah jam masih tersisa (hoursRemaining), jadwal terus dibuat hingga kebutuhan jam terpenuhi atau semua slot habis.
+
+
